@@ -8,10 +8,12 @@
 */
 
 #include "IbusTrx.h"
+#include "..\..\..\src\appconfig.h"
+
 // open serial port
 void IbusTrx::begin(HardwareSerial &userPort) {
   serialPort = &userPort;
-  serialPort->begin(9600, SERIAL_8E1);
+  serialPort->begin(9600, SERIAL_8E1, 19, 18);
 }
 
 // close serial port

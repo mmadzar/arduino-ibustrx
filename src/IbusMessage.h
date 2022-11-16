@@ -9,6 +9,8 @@ class IbusMessage{
     uint8_t length();
     uint8_t destination();
     uint8_t b(uint8_t n);
+    uint8_t *bytes();
+    String hex();
     IbusMessage(uint8_t *buffer);
     ~IbusMessage();
 
